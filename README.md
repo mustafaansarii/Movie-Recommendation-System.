@@ -1,41 +1,66 @@
-# Movie Recommendation System
-
-![Project Logo](/assets/movei1.png)
+# Hollywood Movie Recommendation System
 
 ## Overview
 
-This project implements a movie recommendation system using content-based filtering techniques. It suggests movies similar to a given movie based on their features such as genres, keywords, cast, and director.
+This project is a Hollywood Movie Recommendation System that suggests movies to users based on their preferences and behavior. It utilizes collaborative filtering techniques to analyze user interactions with movies and recommend similar movies they might enjoy. The system aims to enhance user experience by providing personalized recommendations.
 
 ## Features
 
-- **Content-Based Filtering:** Utilizes TF-IDF representation and cosine similarity to recommend similar movies.
-- **Interactive Interface:** Provides a user-friendly interface for users to input their preferences and receive personalized recommendations.
-- **Dataset Exploration:** Includes exploratory data analysis of the movie dataset to gain insights into movie trends and characteristics.
-- **Visualization:** Visualizes the recommended movies and their attributes using interactive charts and graphs.
+- Recommends movies based on user preferences and behavior.
+- Uses collaborative filtering algorithms to analyze user interactions and similarities among movies.
+- Provides a user-friendly interface for easy interaction.
+- Supports both user-based and item-based collaborative filtering methods.
+- Allows users to rate movies and receive real-time recommendations.
+
+## Dataset
+
+The dataset used for this project contains information about movies including features like title, description, genres, keywords, cast, director, release date, ratings, popularity, budget, revenue, and runtime. It also includes user interaction data such as ratings, views, and watch history.
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Gradio
 
 ## Installation
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/mustafaansarii/CodeClauseInternship_Movie-Recommendation-System.git
-    ```
+```bash
+git clone https://github.com/mustafaansarii/Movie-Recommendation-System.
+```
 
-2. Install the required dependencies:
+2. Install the required libraries:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the Python script:
+
+```bash
+python movie_recommendation.py
+```
+
+4. Open the provided URL in your web browser to access the interface.
 
 ## Usage
 
-1. Run the Jupyter notebook `Movie Recommender Systems.ipynb`.
-2. Follow the instructions within the notebook to explore the dataset, build the recommendation system, and visualize the recommendations.
+- Visit the provided URL in your web browser.
+- Browse or search for movies.
+- Rate movies you've watched.
+- Receive personalized recommendations based on your ratings and preferences.
 
 ## Screenshots
-![Screenshot 2](/assets/movie3.png)
-![Screenshot 1](/assets/movie2.png)
 
-## License
+![recomended](/assets/d2.png)
 
-This project is licensed under the [MIT License](/LICENCE.txt).
+
+![recomendation](/assets/s1.png)
+
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request with any improvements or feature suggestions.
