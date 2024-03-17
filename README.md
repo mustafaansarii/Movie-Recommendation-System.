@@ -41,7 +41,7 @@ pip install -r requirements.txt
 3. Run the Python script:
 
 ```bash
-python movie_recommendation.py
+python movie_recommendation.ipynb
 ```
 
 4. Open the provided URL in your web browser to access the interface.
