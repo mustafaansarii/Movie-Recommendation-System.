@@ -38,11 +38,8 @@ git clone https://github.com/mustafaansarii/Movie-Recommendation-System.
 pip install -r requirements.txt
 ```
 
-3. Run the Python script:
+3. To Run, use notebook:
 
-```bash
-python movie_recommendation.ipynb
-```
 
 4. Open the provided URL in your web browser to access the interface.
 
@@ -55,10 +52,8 @@ python movie_recommendation.ipynb
 
 ## Screenshots
 
-![recomended](/assets/d2.png)
+![recomended](/assets/moive.png)
 
-
-![recomendation](/assets/s1.png)
 
 
 ## Contributing
