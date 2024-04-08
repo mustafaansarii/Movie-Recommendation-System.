@@ -1,63 +1,40 @@
-# Hollywood Movie Recommendation System
-[Movie Recommendation System is Live here](https://huggingface.co/spaces/Mustafaansari/movie)
+## Movie Recommendation System Documentation
+ [Movie Recommendation System on Render](https://movie-recommendation-system-9heq.onrender.com/)
+### Overview
+The Movie Recommendation System is a web application built on top of a machine learning model provided by Model Bit. It utilizes a REST API to interact with the model, allowing users to input a movie name and receive personalized movie recommendations based on the provided input. The system is deployed on multiple platforms, including Render and Hugging Face.
 
+### Features
+- **Movie Input**: Users can input a movie name into the system.
+- **Personalized Recommendations**: The system generates personalized movie recommendations based on the provided movie name.
+- **Web Interface**: The recommendations are displayed in a user-friendly web interface.
 
-## Overview
+### Deployment Platforms
+- **Render**: The Movie Recommendation System is deployed on Render, making it accessible via the following link: [Movie Recommendation System on Render](https://movie-recommendation-system-9heq.onrender.com/)
+- **Hugging Face**: Additionally, the system is available on Hugging Face's Spaces platform: [Movie Recommendation System on Hugging Face](https://huggingface.co/spaces/Mustafaansari/movie)
 
-This project is a Hollywood Movie Recommendation System that suggests movies to users based on their preferences and behavior. It utilizes collaborative filtering techniques to analyze user interactions with movies and recommend similar movies they might enjoy. The system aims to enhance user experience by providing personalized recommendations.
+### Technologies Used
+- **Flask**: A Python web framework used to build the web application.
+- **REST API**: The system interacts with the machine learning model through a RESTful API.
+- **Model Bit**: Provides the machine learning model used for generating movie recommendations.
+- **HTML/CSS**: Frontend technologies used for designing and styling the web interface.
+- **Render**: A deployment platform used to host the web application.
+- **Hugging Face**: Another deployment platform utilized for hosting the system.
 
-## Features
+### Installation and Setup
+The Movie Recommendation System does not require any installation or setup on the user's end. Users can simply access the system through the provided links on Render or Hugging Face.
 
-- Recommends movies based on user preferences and behavior.
-- Uses collaborative filtering algorithms to analyze user interactions and similarities among movies.
-- Provides a user-friendly interface for easy interaction.
-- Supports both user-based and item-based collaborative filtering methods.
-- Allows users to rate movies and receive real-time recommendations.
+### Usage
+1. **Access the System**: Visit the provided links to access the Movie Recommendation System.
+2. **Input Movie Name**: Enter a movie name into the input field provided on the web page.
+3. **Get Recommendations**: Click the "Get Recommendations" button to submit the movie name and receive personalized recommendations.
+4. **View Recommendations**: The system will display the recommended movies in a user-friendly format on the web page.
 
-## Dataset
+### Additional Information
+- **Model Bit Access**: The machine learning model used by the system is hosted by Model Bit, and access to the model is provided via a RESTful API.
+- **Model Training**: The recommendations provided by the system are based on the training data used to train the machine learning model. The model's accuracy and performance may vary based on the quality and diversity of the training data.
+- **Feedback and Support**: Users can provide feedback or seek support regarding the recommendations or system functionality through the provided contact options on the web page.
 
-The dataset used for this project contains information about movies including features like title, description, genres, keywords, cast, director, release date, ratings, popularity, budget, revenue, and runtime. It also includes user interaction data such as ratings, views, and watch history.
+### Conclusion
+The Movie Recommendation System offers a convenient way for users to discover new movies based on their preferences. By leveraging machine learning and REST API technology, the system provides personalized recommendations tailored to each user's input. Whether accessed through Render or Hugging Face, users can easily explore a curated list of movie recommendations and enhance their movie-watching experience.
 
-## Technologies Used
-
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Gradio
-
-## Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/mustafaansarii/Movie-Recommendation-System.
-```
-
-2. Install the required libraries:
-
-```bash
-pip install -r requirements.txt
-```
-
-3. To Run, use notebook:
-
-
-4. Open the provided URL in your web browser to access the interface.
-
-## Usage
-
-- Visit the provided URL in your web browser.
-- Browse or search for movies.
-- Rate movies you've watched.
-- Receive personalized recommendations based on your ratings and preferences.
-
-## Screenshots
-
-![recomended](/assets/moive.png)
-
-
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request with any improvements or feature suggestions.
+This documentation provides an overview of the Movie Recommendation System, its features, deployment platforms, technologies used, installation instructions, usage guidelines, and additional information. Users can refer to this documentation for guidance on accessing and utilizing the system effectively.
