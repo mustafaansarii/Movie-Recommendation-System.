@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Recommendation System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background-image: url('https://i0.wp.com/www.moviescut.com/wp-content/uploads/2012/12/10-Best-Hollywood-Movie-of-2012.jpg?w=1024&ssl=1');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #42b0fa;
+            position: relative;
+        }
+
+        /* Overlay with reduced opacity */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.5; /* Decrease the opacity value to decrease transparency */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adding a shadow for depth */
+            position: relative;
+            z-index: 1; /* Ensure the container stays above the overlay */
+        }
+
+        h1 {
+            text-align: center;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #9b30ff; /* Set label color to white */
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.8); /* Black background for better contrast */
+            color: #9b30ff; /* Set input text color to white */
+        }
+
+        input[type="submit"] {
+            padding: 12px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: white;
+            border-radius: 5px;
+            border-color: wheat;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #6f20b8;
+        }
+
+        table.dataframe {
+            border-collapse: collapse;
+            border: 5px solid #8b6e8a83;
+            width: 100%;
+            margin-top: 20px;
+            background: linear-gradient(45deg, #ff1491b6, #9b30ffb7, #00bfff); /* Purple and pink gradient background */
+            color: white; /* Set table text color to white */
+        }
+
+        table.dataframe td, table.dataframe th {
+            border: 1px solid #ffffff00;
+            padding: 8px 5px; /* Decreased padding for both horizontal and vertical */
+            text-align: left;
+            cursor: pointer; /* Add cursor pointer on hover */
+        }
+
+        table.dataframe th {
+            background-color: #f2f2f200;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div> <!-- Overlay for background image -->
+    <div class="container">
+        <h1 style="text-align: center;">Movie Recommendation System</h1> 
+        
+        <form action="/" method="post" class="form-group">
+            <label for="movie_name">Enter Movie Name:</label>
+            <input type="text" id="movie_name" name="movie_name">
+            <input type="submit" value="Submit">
+        </form>
+
+        {% if tables %}
+        <h2>Recommended Movie</h2>
+        {% for table in tables %}
+            {{ table|safe }}
+        {% endfor %}
+        {% endif %}
+        <h3>
+            ©developed by <a href="https://github.com/mustafaansarii" style="color: red;">Mustafa</a>
+        </h3>
+    </div>
+    
+
+
+    <script>
+        // JavaScript function to search the web when a movie title is clicked
+        function searchWeb(movieTitle) {
+            // Replace spaces with plus signs for the search query
+            var query = movieTitle.replace(/\s+/g, '+');
+            // Open a new tab/window with the search results
+            window.open('https://www.google.com/search?q=' + query);
+        }
+
+        // Add click event listeners to all table cells containing movie titles
+        var tableCells = document.querySelectorAll('table.dataframe td');
+        tableCells.forEach(function(cell) {
+            cell.addEventListener('click', function() {
+                // Retrieve the movie title from the clicked cell
+                var movieTitle = this.textContent;
+                // Call the searchWeb function with the movie title
+                searchWeb(movieTitle);
+            });
+        });
+    </script>
+
+</body>
+</html>
