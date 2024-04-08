@@ -20,17 +20,18 @@ def recommend(movie_name):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    if 'movie_name' in session:  # Check if movie name is stored in session
-        movie_name = session['movie_name']
-        df = recommend(movie_name)
-        return render_template('index.html', tables=[df.to_html(classes='data')], titles=df.columns.values)
-    
     if request.method == 'POST':
         movie_name = request.form['movie_name']
         session['movie_name'] = movie_name  # Store movie name in session
         return redirect(url_for('index'))  # Redirect to index to display recommendations
     
+    # Check if movie name is stored in session
+    if 'movie_name' in session:
+        movie_name = session.pop('movie_name')  # Remove movie name from session and get its value
+        df = recommend(movie_name)
+        return render_template('index.html', tables=[df.to_html(classes='data')], titles=df.columns.values)
+    
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5002)
+    app.run(debug=True)
