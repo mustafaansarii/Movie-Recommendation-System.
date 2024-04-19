@@ -1,7 +1,7 @@
 # Movie Recommendation System
- ## [Movie Recommendation System on streamlit](https://hollywood-movie-recommendation-system.streamlit.app/) <br>
-  ## [Movie Recommendation System on Render](https://movie-recommendation-system-9heq.onrender.com/) <br>
-  ## [Movie Recommendation System on Hugging Face](https://huggingface.co/spaces/Mustafaansari/movie)
+ ### [Movie Recommendation System on streamlit](https://hollywood-movie-recommendation-system.streamlit.app/) <br>
+  #### [Movie Recommendation System on Render](https://movie-recommendation-system-9heq.onrender.com/) <br>
+  ####  [Movie Recommendation System on Hugging Face](https://huggingface.co/spaces/Mustafaansari/movie)
 ### Overview
 The Movie Recommendation System is a web application built on top of a machine learning model provided by Model Bit. It utilizes a REST API to interact with the model, allowing users to input a movie name and receive personalized movie recommendations based on the provided input. The system is deployed on multiple platforms, including Render and Hugging Face.
 
