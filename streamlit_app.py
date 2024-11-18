@@ -4,7 +4,7 @@ import pandas as pd
 
 def recommend(movie_name):
     response_json = modelbit.get_inference(
-        region="ap-south-1",
+        region="us-east-2.aws",
         workspace="mustafaansari",
         deployment="recommend",
         data=movie_name
@@ -22,13 +22,12 @@ st.set_page_config(
 )
 
 # Sidebar
-st.sidebar.image("assets/stre.png", use_column_width=True)
+st.sidebar.image("assets/stre.png", use_container_width=True)  # Updated here
 st.sidebar.title("Developed:")
 st.sidebar.markdown(
     """
-     
     **Email:** mustafaansari@mail.com  
-    **LinkedIn:** [LinkedIn/mustafaansaari/](https://www.linkedin.com/in/mustafaansaari/)  
+    **LinkedIn:** [LinkedIn/mustafaansaari/](https://www.linkedin.com/in/mustafaansari/)  
     **GitHub:** [github/mustafaansaari/](https://github.com/mustafaansarii)  
     """
 )
